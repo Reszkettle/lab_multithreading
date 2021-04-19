@@ -22,7 +22,7 @@ public class BetterRadar {
     }
 
     public void notice(Scud enemyMissile) {
-        this.executor.submit(() -> {
+        this.executor.execute(() -> {
             for (int i = 0; i < rocketsCount; ++i) {
                 this.battery.launchPatriot(enemyMissile);
             }
